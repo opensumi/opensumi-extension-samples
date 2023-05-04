@@ -1,0 +1,67 @@
+{
+  "name": "custom-webpack-sample",
+  "displayName": "自定义 webpack 配置示例",
+  "description": "",
+  "publisher": "opensumi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0",
+    "sumi": "^1.8.30"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "HelloKaitian",
+        "title": "HelloKaitian"
+      }
+    ]
+  },
+  "kaitianContributes": {
+    "browserMain": "./dist/browserExtension.js",
+    "nodeMain": "./dist/nodeExtension.js",
+    "viewsProxies": [
+      "Leftview"
+    ],
+    "browserViews": {
+      "left": {
+        "type": "add",
+        "view": [
+          {
+            "id": "Leftview",
+            "icon": "extension"
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "sumi compile --config",
+    "watch": "sumi watch --config",
+    "dev": "sumi dev -e=$(pwd)"
+  },
+  "devDependencies": {
+    "@opensumi/sumi": "latest",
+    "@opensumi/cli": "^1.0.2",
+    "@types/node": "^10.12.21",
+    "@types/react": "^16.9.9",
+    "@types/vscode": "^1.39.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.4.5",
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "@opensumi/ide-components": "latest",
+    "@opensumi/extension-logger": "^1.0.2",
+    "antd": "^4.11.2"
+  }
+}

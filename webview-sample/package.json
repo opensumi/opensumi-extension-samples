@@ -1,0 +1,58 @@
+{
+  "name": "webview-sample",
+  "displayName": "Webview 示例",
+  "description": "webview sample",
+  "publisher": "opensumi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0",
+    "sumi": "^1.8.30"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "HelloKaitian",
+        "title": "HelloKaitian"
+      }
+    ]
+  },
+  "kaitianContributes": {
+    "browserMain": "./out/browser/index.js",
+    "nodeMain": "./out/node/index.js",
+    "viewsProxies": [
+      "WebviewContainer"
+    ],
+    "browserViews": {
+      "left": {
+        "type": "add",
+        "view": [
+          {
+            "id": "WebviewContainer",
+            "iconPath": "icons/Web.png",
+            "title": "Plain Webview 示例"
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "sumi compile",
+    "watch": "sumi watch",
+    "dev": "sumi dev -e=$(pwd)"
+  },
+  "devDependencies": {
+    "@opensumi/sumi": "latest",
+    "react": "^16.13.0"
+  },
+  "dependencies": {
+    "@opensumi/extension-logger": "^1.0.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "less.validate": false,
+  "scss.validate": false,
+  "debug.toolbar.float": true,
+  "explorer.compactFolders": true,
+  "explorer.fileTree.baseIndent": 7,
+  "terminal.type": "zsh",
+  "editor.autoSave": "off",
+  "editor.askIfDiff": false,
+  "editor.minimap": true,
+  "editor.previewMode": false,
+  "editor.formatOnPaste": false,
+  "kaitian.extension-devtool.desktopPath": "",
+  "kaitian.extension-devtool.autoWatch": true,
+  "kaitian.extension-devtool.enableDebugPort": true
+}

@@ -1,0 +1,5 @@
+{
+  "contributes.command.hello.title": "Hello O2",
+
+  "browser.view.change.title": "Change Title"
+}

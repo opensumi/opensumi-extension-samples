@@ -1,0 +1,65 @@
+{
+  "name": "i18n-sample",
+  "displayName": "OpenSumi 插件国际化示例",
+  "description": "i18n",
+  "publisher": "opensumi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0",
+    "sumi": "^1.8.30"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "HelloKaitian",
+        "title": "%contributes.command.hello.title%"
+      }
+    ]
+  },
+  "kaitianContributes": {
+    "browserMain": "./out/browser/index.js",
+    "nodeMain": "./out/node/index.js",
+    "viewsProxies": [
+      "Leftview"
+    ],
+    "browserViews": {
+      "left": {
+        "type": "add",
+        "view": [
+          {
+            "id": "Leftview",
+            "icon": "extension"
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "sumi compile",
+    "watch": "sumi watch",
+    "dev": "sumi dev -e=$(pwd)"
+  },
+  "devDependencies": {
+    "@opensumi/sumi": "latest",
+    "@types/node": "^10.12.21",
+    "@types/react": "^16.9.9",
+    "@types/vscode": "^1.39.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.4.5",
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "@opensumi/ide-components": "latest",
+    "vscode-nls": "^4.1.2"
+  }
+}

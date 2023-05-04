@@ -1,0 +1,70 @@
+{
+  "name": "toolbar-sample",
+  "displayName": "Toolbar 示例",
+  "description": "Toolbar 示例",
+  "publisher": "opensumi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0",
+    "sumi": "^1.8.30"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "HelloKaitian",
+        "title": "HelloKaitian"
+      }
+    ]
+  },
+  "kaitianContributes": {
+    "nodeMain": "./out/node/index.js",
+    "toolbar": {
+      "actions": [
+        {
+          "type": "button",
+          "title": "运行",
+          "iconPath": "./icons/start.svg",
+          "id": "sample-start",
+          "command": "sample-start",
+          "states": {
+            "default": {
+              "btnTitleStyle": "horizontal",
+              "titleForeground": "#FF004F"
+            },
+            "clicked": {
+              "titleForeground": "#CCC"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "sumi compile",
+    "watch": "sumi watch",
+    "dev": "sumi dev -e=$(pwd)"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.39.0",
+    "@types/react": "^16.9.9",
+    "@opensumi/cli": "latest",
+    "tslint": "^5.12.1",
+    "typescript": "^3.4.5",
+    "vscode": "^1.1.28",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "@opensumi/sumi": "latest"
+  },
+  "dependencies": {
+    "@opensumi/ide-components": "latest"
+  }
+}

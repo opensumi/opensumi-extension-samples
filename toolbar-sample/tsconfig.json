@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "CommonJS",
+    "target": "es6",
+    "jsx": "react",
+    "outDir": "out",
+    "lib": [
+      "es6",
+      "DOM"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ],
+    "sourceMap": true,
+    "rootDir": "src",
+    "strict": false,
+    "experimentalDecorators": true,
+    "paths": {
+      "sumi": [
+        "./node_modules/@opensumi/sumi"
+      ],
+      "sumi-browser":[
+        "./node_modules/@opensumi/sumi"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    ".vscode-test"
+  ],
+  "include": [
+    "./src/extension.ts",
+    "./src/extend/**/*"
+  ]
+}

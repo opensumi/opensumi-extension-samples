@@ -1,0 +1,5 @@
+{
+  "contributes.command.hello.title": "你好 O2",
+
+  "browser.view.change.title": "更改标题"
+}

@@ -1,0 +1,63 @@
+{
+  "name": "command-sample",
+  "displayName": "Command Sample",
+  "description": "",
+  "publisher": "opensumi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0",
+    "sumi": "^1.8.30"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "HelloKaitian",
+        "title": "HelloKaitian"
+      }
+    ]
+  },
+  "kaitianContributes": {
+    "browserMain": "./out/browser/index.js",
+    "viewsProxies": ["Leftview"],
+    "browserViews": {
+      "left": {
+        "type": "add",
+        "view": [
+          {
+            "id": "Leftview",
+            "icon": "extension"
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "sumi compile",
+    "watch": "sumi watch",
+    "dev": "sumi dev -e=$(pwd)"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.39.0",
+    "@types/react": "^16.9.9",
+    "tslint": "^5.12.1",
+    "typescript": "^3.4.5",
+    "vscode": "^1.1.28",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "@opensumi/sumi": "latest"
+  },
+  "dependencies": {
+    "@opensumi/ide-components": "latest",
+    "antd": "^4.11.2",
+    "@opensumi/extension-logger": "^1.0.2"
+  }
+}
