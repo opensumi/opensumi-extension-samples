@@ -21,7 +21,17 @@
         "command": "HelloKaitian",
         "title": "%contributes.command.hello.title%"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "%test-extension-config-title%",
+      "properties": {
+        "my-extension.enable-auto-bugfix-feature": {
+          "type": "boolean",
+          "default": false,
+          "description": "%test-extension-config.config.enable-auto-bugfix-feature%"
+        }
+      }
+    }
   },
   "kaitianContributes": {
     "browserMain": "./out/browser/index.js",

@@ -1,5 +1,6 @@
 {
-  "contributes.command.hello.title": "Hello O2",
-
-  "browser.view.change.title": "Change Title"
+  "contributes.command.hello.title": "Hello OpenSumi",
+  "browser.view.change.title": "Change Title",
+  "test-extension-config-title": "Test Configuration",
+  "test-extension-config.config.enable-auto-bugfix-feature": "Enable Test Feature"
 }

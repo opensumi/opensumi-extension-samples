@@ -1,5 +1,6 @@
 {
-  "contributes.command.hello.title": "你好 O2",
-
-  "browser.view.change.title": "更改标题"
+  "contributes.command.hello.title": "你好 OpenSumi",
+  "browser.view.change.title": "更改标题",
+  "test-extension-config-title": "测试插件配置",
+  "test-extension-config.config.enable-auto-bugfix-feature": "测试开启功能"
 }
