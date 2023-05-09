@@ -1,6 +1,13 @@
 import * as sumi from 'sumi';
 
 export async function activate(context: sumi.ExtensionContext) {
+  const action = await sumi.toolbar.getToolbarActionButtonHandle('popover-start');
+    setInterval(() => {
+      action.setContext({			// 定时更新 context 值
+        name: 'World' + Math.round(Math.random() * 100),
+    });
+  }, 1000);
+
   // sumi.toolbar.registerToolbarAction
   const printer = await sumi.toolbar.registerToolbarAction({
     type: 'button',
@@ -63,7 +70,6 @@ export async function activate(context: sumi.ExtensionContext) {
     gift.setState('selected');
     sumi.window.showInformationMessage(`Select ${e}`);
   });
-
 
   // sumi.toolbar.getToolbarActionButtonHandle
   sumi.commands.registerCommand('sample-start', async () => {

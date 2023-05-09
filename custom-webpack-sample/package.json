@@ -18,8 +18,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "HelloKaitian",
-        "title": "HelloKaitian"
+        "command": "HelloOpenSumi",
+        "title": "HelloOpenSumi"
       }
     ]
   },
