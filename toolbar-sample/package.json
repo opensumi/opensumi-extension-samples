@@ -18,24 +18,45 @@
   "contributes": {
     "commands": [
       {
-        "command": "HelloKaitian",
-        "title": "HelloKaitian"
+        "command": "popover-command",
+        "title": "Popover Clicked"
       }
     ]
   },
   "kaitianContributes": {
+    "browserMain": "./out/browser/index.js",
     "nodeMain": "./out/node/index.js",
     "toolbar": {
       "actions": [
         {
           "type": "button",
-          "title": "运行",
+          "title": "运行 (Run)",
           "iconPath": "./icons/start.svg",
           "id": "sample-start",
           "command": "sample-start",
           "states": {
             "default": {
               "btnTitleStyle": "horizontal",
+              "titleForeground": "#FF004F"
+            },
+            "clicked": {
+              "titleForeground": "#CCC"
+            }
+          }
+        },
+        {
+          "type": "button",
+          "title": "弹窗 (Popover)",
+          "iconPath": "./icons/book.svg",
+          "id": "popover-start",
+          "command": "popover-command",
+          "popoverComponent": "CustomPopover",
+          "popoverStyle": {
+            "minWidth": "200",
+            "minHeight": "200"
+          },
+          "states": {
+            "default": {
               "titleForeground": "#FF004F"
             },
             "clicked": {

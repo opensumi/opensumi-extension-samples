@@ -13,14 +13,14 @@
   ],
   "activationEvents": [
     "*",
-    "onCommand:HelloKaitian"
+    "onCommand:HelloOpenSumi"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "HelloKaitian",
-        "title": "HelloKaitian"
+        "command": "HelloOpenSumi",
+        "title": "HelloOpenSumi"
       }
     ]
   },

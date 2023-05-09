@@ -7,8 +7,8 @@ const logger = loggerFactory('<Your Logger Name>', 'Trace');
 export function activate(context: vscode.ExtensionContext) {
   logger.info('Extension is activating...');
   context.subscriptions.push(
-    vscode.commands.registerCommand("HelloKaitian", async () => {
-      logger.info('execute HelloKaitian');
+    vscode.commands.registerCommand("HelloOpenSumi", async () => {
+      logger.info('execute HelloOpenSumi');
       vscode.window.showInformationMessage('Hello Kaitian');
     })
   );
