@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand(Commands.sayHello, async () => {
       logger.info(`execute command: ${Commands.sayHello}`);
-      vscode.window.showInformationMessage('Hello Kaitian');
+      vscode.window.showInformationMessage('Hello OpenSumi');
     })
   );
 
