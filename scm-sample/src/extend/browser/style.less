@@ -1,0 +1,26 @@
+.scm-addon-after-icon-container {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #2C3033;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+
+    &.disabled {
+      background-color: transparent;
+      cursor: not-allowed;
+
+      .loading-icon {
+        animation: spin 2s linear infinite;
+        color: #1478D5;
+      }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+}
