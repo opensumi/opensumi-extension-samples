@@ -1,0 +1,58 @@
+{
+  "name": "scm-contributes-example",
+  "displayName": "scm-contributes-example",
+  "description": " ",
+  "publisher": "opensumi",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.36.0",
+    "sumi": "^1.8.30"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "sumiContributes": {
+    "browserMain": "./out/browser/index.js",
+    "nodeMain": "./out/node/index.js",
+    "scm": {
+      "additional": {
+        "input": {
+          "addonAfter": [
+            "AddonAfterIcon"
+          ]
+        }
+      }
+    }
+  },
+  "tnpm": {
+    "mode": "yarn"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "sumi compile",
+    "watch": "sumi watch",
+    "dev": "sumi dev -e=$(pwd)"
+  },
+  "devDependencies": {
+    "@opensumi/sumi": "latest",
+    "@opensumi/cli": "latest",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.6.4",
+    "@types/react": "^16.9.9",
+    "events": "^3.2.0",
+    "jest": "^26.4.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "ts-jest": "^26.4.4",
+    "tslint": "^5.12.1",
+    "typescript": "^3.4.5",
+    "vscode-uri": "^3.0.2"
+  },
+  "dependencies": {
+    "@opensumi/ide-components": "latest"
+  }
+}
